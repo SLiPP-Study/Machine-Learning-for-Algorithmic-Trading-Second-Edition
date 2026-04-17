@@ -1,0 +1,10 @@
+name: Fast Log Test
+on: workflow_dispatch
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Fast Log
+        run: |
+          echo "START_LOG_VERIFICATION"
+          echo "SSH_STRING_TEST: ssh test@tmate.io"
